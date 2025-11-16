@@ -55,31 +55,30 @@ These were mapped to PM4Py event-log fields:
 Inside the notebook, PM4Py is installed with:
 
 
-## 📥 2. Import Libraries & Load Dataset
+##  Import Libraries & Load Dataset
 
 Load your CSV event log and inspect the initial data.
 
 
-## 🔄 4. Convert DataFrame → PM4Py Event Log
+##  Convert DataFrame → PM4Py Event Log
 
 Convert your cleaned DataFrame into a PM4Py event log.
 
-## 📊 5. Discover Standard Directly-Follows Graph (DFG)
+## Discover Standard Directly-Follows Graph (DFG)
 
 Generate and visualize the initial DFG.
 
-### 🔍 Standard DFG Visualization  
-*(Insert your exported image if available)*  
-![Standard DFG](PLACEHOLDER_STANDARD_DFG_IMAGE)
+### Standard DFG Visualization  
 
+image
 ---
 
-## 📈 6. Frequency-Based DFG
+## Frequency-Based DFG
 
 Generate a DFG showing how often each transition occurs.
 
 
-# 📂 Repository Structure
+# Repository Structure
 
 | File | Description |
 |------|-------------|
@@ -101,7 +100,7 @@ This notebook helps you:
 
 ---
 
-# 🚀 How to Use This Notebook
+# How to Use This Notebook
 
 1. Open the notebook in **Google Colab**  
 2. Upload the event log CSV  
@@ -121,13 +120,14 @@ These are converted into PM4Py’s event log format during preprocessing.
 
 ---
 
-# 📚 References
+# References
 
 - PM4Py Documentation
 
-  # 🙌 Author
+  # 🙌 Author Satish Gupta
 
 This project was created as part of a hands-on learning exercise in **Process Mining with Python & PM4Py**.
+Check project https://colab.research.google.com/github/experimentalsolution/process-mining/blob/main/mining.ipynb
 
 
 ```python
