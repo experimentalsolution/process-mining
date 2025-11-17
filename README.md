@@ -104,6 +104,9 @@ dfg_visualization.view(gviz)
 ```
 
 It will display image 
+
+<img width="1435" height="126" alt="Screenshot 2025-11-17 at 5 27 36 PM" src="https://github.com/user-attachments/assets/eae414c4-de4c-412f-8af8-ac69dbe6992e" />
+
 ---
 
 ## Frequency-Based DFG
@@ -116,6 +119,10 @@ dfg_freq = dfg_discovery.apply(log, variant=dfg_discovery.Variants.FREQUENCY)
 gviz_freq = dfg_visualization.apply(dfg_freq, log=log, variant=dfg_visualization.Variants.FREQUENCY)
 dfg_visualization.view(gviz_freq)
 ```
+
+
+<img width="1435" height="126" alt="Screenshot 2025-11-17 at 5 27 36 PM" src="https://github.com/user-attachments/assets/bb915922-5455-4b0d-9e10-5bbd5a6d2e1b" />
+
 ## Performance-Based DFG
 
 ```
@@ -123,6 +130,7 @@ dfg_perf = dfg_discovery.apply(log, variant=dfg_discovery.Variants.PERFORMANCE)
 gviz_perf = dfg_visualization.apply(dfg_perf, log=log, variant=dfg_visualization.Variants.PERFORMANCE)
 dfg_visualization.view(gviz_perf)
 ```
+<img width="1438" height="93" alt="Screenshot 2025-11-17 at 5 29 42 PM" src="https://github.com/user-attachments/assets/d7b65528-6c99-4b79-8906-837f1ebbebff" />
 
 # Repository Structure
 
