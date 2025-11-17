@@ -88,7 +88,7 @@ Generate a DFG showing how often each transition occurs.
 | `dfg_performance.png` | *(optional)* Performance DFG image |
 | `README.md` | Project documentation |
 
-# 🎯 Purpose of the Notebook
+#  Purpose of the Notebook
 
 This notebook helps you:
 
@@ -127,7 +127,7 @@ These are converted into PM4Py’s event log format during preprocessing.
   # Author Satish Gupta
 
 This project was created as part of a hands-on learning exercise in **Process Mining with Python & PM4Py**.
-Check project https://colab.research.google.com/github/experimentalsolution/process-mining/blob/main/mining.ipynb
+[Check project ](https://colab.research.google.com/github/experimentalsolution/process-mining/blob/main/mining.ipynb)
 
 
 ```python
