@@ -54,29 +54,75 @@ These were mapped to PM4Py event-log fields:
 
 Inside the notebook, PM4Py is installed with:
 
+```
+!pip install pm4py
+```
+
 
 ##  Import Libraries & Load Dataset
 
 Load your CSV event log and inspect the initial data.
 
+```
+import pm4py
+
+import pandas as pd
+
+df = pd.read_csv('Insurance_claims_event_log.csv')
+```
+
 
 ##  Convert DataFrame → PM4Py Event Log
 
 Convert your cleaned DataFrame into a PM4Py event log.
+```
+df = df.rename(columns={
+    "case_id": "case:concept:name",
+    "activity_name": "concept:name",
+    "timestamp": "time:timestamp"
+})
+df["time:timestamp"] = pd.to_datetime(df["time:timestamp"])
+```
 
 ## Discover Standard Directly-Follows Graph (DFG)
 
 Generate and visualize the initial DFG.
 
+```
+import pm4py
+from pm4py.algo.discovery.dfg import algorithm as dfg_discovery
+from pm4py.visualization.dfg import visualizer as dfg_visualization
+log = pm4py.convert_to_event_log(df)
+dfg = dfg_discovery.apply(log)
+```
+
 ### Standard DFG Visualization  
 
-image
+```
+gviz = dfg_visualization.apply(dfg, log=log)
+dfg_visualization.view(gviz)
+```
+
+It will display image 
 ---
 
 ## Frequency-Based DFG
 
-Generate a DFG showing how often each transition occurs.
+```
+from pm4py.algo.discovery.dfg import algorithm as dfg_discovery
+from pm4py.visualization.dfg import visualizer as dfg_visualization
 
+dfg_freq = dfg_discovery.apply(log, variant=dfg_discovery.Variants.FREQUENCY)
+gviz_freq = dfg_visualization.apply(dfg_freq, log=log, variant=dfg_visualization.Variants.FREQUENCY)
+dfg_visualization.view(gviz_freq)
+```
+## Performance-Based DFG
+
+```
+dfg_perf = dfg_discovery.apply(log, variant=dfg_discovery.Variants.PERFORMANCE)
+gviz_perf = dfg_visualization.apply(dfg_perf, log=log, variant=dfg_visualization.Variants.PERFORMANCE)
+dfg_visualization.view(gviz_perf)
+```
 
 # Repository Structure
 
