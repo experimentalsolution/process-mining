@@ -31,12 +31,10 @@ The dataset contains dummy HR onboarding events with fields including:
 
 
 These were mapped to PM4Py event-log fields:
+Employee_ID is mapped to case:concept:name
+Activity is mapped to concept:name
+timestamp is mapped to time:timestamp
 
-| Original Column  | PM4Py Required Column |
-|------------------|------------------------|
-| `Employee_ID`    | `case:concept:name`    |
-| `Activity`       | `concept:name`         |
-| `timestamp`      | `time:timestamp`       |
 
 ---
 
@@ -133,13 +131,12 @@ dfg_visualization.view(gviz_perf)
 
 # Repository Structure
 
-| File | Description |
-|------|-------------|
-| `mining.ipynb` | Main Google Colab notebook |
-| `HR_Onboarding.csv` | Input event log dataset |
-| `dfg_frequency.png` | *(optional)* Frequency DFG image |
-| `dfg_performance.png` | *(optional)* Performance DFG image |
-| `README.md` | Project documentation |
+
+| `mining.ipynb` is  Main Google Colab notebook |
+| `HR_Onboarding.csv` is Input event log dataset |
+| `dfg_frequency.png`  is Frequency DFG image |
+| `dfg_performance.png` is Performance DFG image |
+| `README.md` is Project documentation |
 
 #  Purpose of the Notebook
 
