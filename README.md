@@ -23,20 +23,19 @@ This notebook covers:
 
 ##  Dataset Description
 
-The dataset contains real (simulated) insurance claims events with fields including:
+The dataset contains dummy HR onboarding events with fields including:
 
-- `case_id` — unique claim identifier  
-- `activity_name` — process step  
+- `Employee_ID` — unique claim identifier  
+- `Activity` — process step  
 - `timestamp` — event time  
-- Claimant and adjuster information  
-- Claim amount, policy type, accident type, etc.
+
 
 These were mapped to PM4Py event-log fields:
 
-| Original Column | PM4Py Required Column |
+| Original Column  | PM4Py Required Column |
 |------------------|------------------------|
-| `case_id`        | `case:concept:name`    |
-| `activity_name`  | `concept:name`         |
+| `Employee_ID`    | `case:concept:name`    |
+| `Activity`       | `concept:name`         |
 | `timestamp`      | `time:timestamp`       |
 
 ---
@@ -68,7 +67,7 @@ import pm4py
 
 import pandas as pd
 
-df = pd.read_csv('Insurance_claims_event_log.csv')
+df = pd.read_csv('HR_Onboarding.csv')
 ```
 
 
@@ -77,9 +76,9 @@ df = pd.read_csv('Insurance_claims_event_log.csv')
 Convert your cleaned DataFrame into a PM4Py event log.
 ```
 df = df.rename(columns={
-    "case_id": "case:concept:name",
-    "activity_name": "concept:name",
-    "timestamp": "time:timestamp"
+    "Employee_ID": "case:concept:name",
+    "Activity": "concept:name",
+    "Timestamp": "time:timestamp"
 })
 df["time:timestamp"] = pd.to_datetime(df["time:timestamp"])
 ```
@@ -137,7 +136,7 @@ dfg_visualization.view(gviz_perf)
 | File | Description |
 |------|-------------|
 | `mining.ipynb` | Main Google Colab notebook |
-| `Insurance_claims_event_log.csv` | Input event log dataset |
+| `HR_Onboarding.csv` | Input event log dataset |
 | `dfg_frequency.png` | *(optional)* Frequency DFG image |
 | `dfg_performance.png` | *(optional)* Performance DFG image |
 | `README.md` | Project documentation |
@@ -162,13 +161,11 @@ This notebook helps you:
 4. Visualizations (DFGs) will appear automatically
 
 
-The insurance claims dataset contains:
+The HR Onboarding  dataset contains:
 
-- Case IDs  
+- Employee_ID 
 - Activities  
-- Timestamps  
-- Claimant / agent / adjuster info  
-- Policy and accident details  
+- Timestamps   
 
 These are converted into PM4Py’s event log format during preprocessing.
 
