@@ -1,4 +1,4 @@
-# 📊 Process Mining with PM4Py  
+#  Process Mining with PM4Py  
 A Hands-On Tutorial Using Real Insurance Claims Event Log Data
 
 This project demonstrates how to perform **process discovery**, **bottleneck detection**, and **visual analysis** using the **PM4Py** process mining library in Python.  
@@ -6,7 +6,7 @@ The notebook processes an insurance claims event log, converts it into an event 
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 This notebook covers:
 
@@ -21,7 +21,7 @@ This notebook covers:
 
 ---
 
-## 📂 Dataset Description
+##  Dataset Description
 
 The dataset contains real (simulated) insurance claims events with fields including:
 
@@ -41,7 +41,7 @@ These were mapped to PM4Py event-log fields:
 
 ---
 
-## 🔧 Technologies Used
+##  Technologies Used
 
 - **Python 3**
 - **PM4Py** – Process Mining for Python  
@@ -50,7 +50,7 @@ These were mapped to PM4Py event-log fields:
 
 ---
 
-## 📥 Installation
+## Installation
 
 Inside the notebook, PM4Py is installed with:
 
@@ -124,7 +124,7 @@ These are converted into PM4Py’s event log format during preprocessing.
 
 - PM4Py Documentation
 
-  # 🙌 Author Satish Gupta
+  # Author Satish Gupta
 
 This project was created as part of a hands-on learning exercise in **Process Mining with Python & PM4Py**.
 Check project https://colab.research.google.com/github/experimentalsolution/process-mining/blob/main/mining.ipynb
